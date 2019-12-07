@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <br>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container-1">
+        <!-- Timeblocks (formatting carries on throughout with the addition of row specific ids)-->
+        <div class="row" id="nineAm">
+            <div class="col-md-1"></div>
+            <!-- Hour column display-->
+            <div class="col-md-1 hour">9am</div>
+            <!--Description inout textarea-->
+            <div class="col-md-8 description" style="padding: 0px;"><textarea style="height: 80px; width: 100%;" id="descriptionNine"></textarea></div>
+            <!--Save button-->
+            <div class="col-md-1" style="padding:0%"><button class="saveBtn fa fa-save" id="saveBtnNine"></button></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" id="tenAm">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 hour">10am</div>
+            <div class="col-md-8 description" style="padding: 0px;"><textarea style="height: 80px; width: 100%;" id="descriptionTen"></textarea></div>
+            <div class="col-md-1" style="padding:0%"><button class="saveBtn fa fa-save" id="saveBtnTen"></button></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" id="elevenAm">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 hour">11am</div>
+            <div class="col-md-8 description" style="padding: 0px;"><textarea style="height: 80px; width: 100%;" id="descriptionEleven"></textarea></div>
+            <div class="col-md-1" style="padding:0%"><button class="saveBtn fa fa-save" id="saveBtnEleven"></button></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" id="twelvePm">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 hour">12pm</div>
+            <div class="col-md-8 description" style="padding: 0px;"><textarea style="height: 80px; width: 100%;" id="descriptionTwelve"></textarea></div>
+            <div class="col-md-1" style="padding:0%"><button class="saveBtn fa fa-save" id="saveBtnTwelve"></button></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" id="onePm">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 hour">1pm</div>
+            <div class="col-md-8 description" style="padding: 0px;"><textarea style="height: 80px; width: 100%;" id="descriptionOne"></textarea></div>
+            <div class="col-md-1" style="padding:0%"><button class="saveBtn fa fa-save" id="saveBtnOne"></button></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" id="twoPm">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 hour">2pm</div>
+            <div class="col-md-8 description" style="padding: 0px;"><textarea style="height: 80px; width: 100%;" id="descriptionTwo"></textarea></div>
+            <div class="col-md-1" style="padding:0%"><button class="saveBtn fa fa-save" id="saveBtnTwo"></button></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" id="threePm">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 hour">3pm</div>
+            <div class="col-md-8 description" style="padding: 0px;"><textarea style="height: 80px; width: 100%;" id="descriptionThree"></textarea></div>
+            <div class="col-md-1" style="padding:0%"><button class="saveBtn fa fa-save" id="saveBtnThree"></button></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" id="fourPm">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 hour">4pm</div>
+            <div class="col-md-8 description" style="padding: 0px;"><textarea style="height: 80px; width: 100%;" id="descriptionFour"></textarea></div>
+            <div class="col-md-1"style="padding:0%"><button class="saveBtn fa fa-save" id="saveBtnFour"></button></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" id="fivePm">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 hour">5pm</div>
+            <div class="col-md-8 description" style="padding: 0px;"><textarea style="height: 80px; width: 100%;" id="descriptionFive"></textarea></div>
+            <div class="col-md-1"style="padding:0%"><button class="saveBtn fa fa-save" id="saveBtnFive"></button></div>
+            <div class="col-md-1"></div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
